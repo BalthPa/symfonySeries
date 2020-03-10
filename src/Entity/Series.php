@@ -42,7 +42,6 @@ class Series
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="series")
-     * @Assert\NotBlank
      */
     private $categorie;
 
