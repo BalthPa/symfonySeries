@@ -15,6 +15,10 @@
                             <p>Fin : {{serie.anneeFin | date('Y')}}</p>
                         {% endif %}
                         <p>{{serie.saisons}} saisons </p>
+
+                        {% if serie.affiche is not null %}
+                            <img src="{{ asset('assets/images/' ~ serie.affiche) }}" style="height:18rem"/>
+                        {% endif %}
                 </div>            
             </div>
         </div>

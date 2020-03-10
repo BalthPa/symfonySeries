@@ -20,7 +20,9 @@ class SerieType extends AbstractType
             ->add('anneeDebut')
             ->add('anneeFin')
             ->add('saisons')
-            ->add('affiche', FileType::class)
+            ->add('affiche', FileType::class, [
+                    'data_class' => null
+            ])
             //->add('categorie')
         ;
     }
