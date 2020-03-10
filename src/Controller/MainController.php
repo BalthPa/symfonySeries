@@ -180,8 +180,8 @@ class MainController extends AbstractController
      */
     public function removeCategorie($id, EntityManagerInterface $entityManager){
         $categorie = $this->getDoctrine()->getRepository(Categories::class)->find($id);
-        $categorie = removeSeries()->setCategorie(NULL);
-
+    
+        
         $entityManager->remove($categorie);
         $entityManager->flush();
 
