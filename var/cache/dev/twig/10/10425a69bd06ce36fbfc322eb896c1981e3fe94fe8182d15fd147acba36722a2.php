@@ -187,7 +187,7 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 47
         echo "                </select>
-            <button type=\"submit\" class=\"btn btn-primary\">Ajouter tâche</button>
+            <button type=\"submit\" class=\"btn btn-primary\">Ajouter Série</button>
             ";
         // line 49
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 49, $this->source); })()), 'form_end');
@@ -267,7 +267,7 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
                     <option value='{{categorie.id}}'>{{categorie.nom}}</option>
                     {% endfor %}
                 </select>
-            <button type=\"submit\" class=\"btn btn-primary\">Ajouter tâche</button>
+            <button type=\"submit\" class=\"btn btn-primary\">Ajouter Série</button>
             {{form_end(addSeries)}}
         </div>
     </div>

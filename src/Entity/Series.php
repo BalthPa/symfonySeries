@@ -19,11 +19,13 @@ class Series
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $nom;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank
      */
     private $anneeDebut;
 
@@ -34,11 +36,13 @@ class Series
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank
      */
     private $saisons;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="series")
+     * @Assert\NotBlank
      */
     private $categorie;
 
