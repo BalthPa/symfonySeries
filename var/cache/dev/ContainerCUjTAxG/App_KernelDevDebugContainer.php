@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerA724Mxc;
+namespace ContainerCUjTAxG;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -5301,6 +5301,8 @@ class App_KernelDevDebugContainer extends Container
             'kernel.container_class' => 'App_KernelDevDebugContainer',
             'container.dumper.inline_class_loader' => true,
             'container.dumper.inline_factories' => true,
+            'parameters' => NULL,
+            'upload_files' => (\dirname(__DIR__, 4).'/public/assets/images'),
             'fragment.renderer.hinclude.global_template' => '',
             'fragment.path' => '/_fragment',
             'kernel.http_method_override' => true,

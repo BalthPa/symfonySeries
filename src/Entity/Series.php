@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SeriesRepository")
@@ -40,6 +41,12 @@ class Series
      * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="series")
      */
     private $categorie;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     * @Assert\File(mimeTypes={"image/png", "image/jpeg"})
+     */
+    private $affiche;
 
     public function getId(): ?int
     {
@@ -102,6 +109,18 @@ class Series
     public function setCategorie(?Categories $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getAffiche()
+    {
+        return $this->affiche;
+    }
+
+    public function setAffiche($affiche)
+    {
+        $this->affiche = $affiche;
 
         return $this;
     }

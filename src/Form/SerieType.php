@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class SerieType extends AbstractType
@@ -19,6 +20,7 @@ class SerieType extends AbstractType
             ->add('anneeDebut')
             ->add('anneeFin')
             ->add('saisons')
+            ->add('affiche', FileType::class)
             //->add('categorie')
         ;
     }

@@ -7,6 +7,7 @@ use App\Entity\Series;
 use App\Form\CategorieType;
 use App\Form\SerieType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -63,6 +64,10 @@ class MainController extends AbstractController
                             ->getRepository(Categories::class)
                             ->findAll();
 
+        if (!is_null($serie->getAffiche())) {
+            $serie->setAffiche(new File($this->getParameter('upload_files').'/'.$serie->getAffiche()));
+        }
+
         $formSerie = $this->createForm(SerieType::class, $serie);
         $formSerie->handleRequest($request);
 
@@ -73,6 +78,12 @@ class MainController extends AbstractController
             $categorie = $this->getDoctrine()
                     ->getRepository(Categories::class)
                     ->find($request->request->get('categorie'));
+
+            $affiche = $serie->getAffiche();
+            $afficheName = md5(uniqid()).'.'.$affiche->guessExtension();
+            $affiche->move($this->getParameter('upload_files') ,
+            $afficheName);
+            $serie ->setAffiche($afficheName);
 
             $serie->setCategorie($categorie);
 
@@ -118,7 +129,7 @@ class MainController extends AbstractController
 
         return $this->render('main/ficheSerie.html.twig', [
             'serie' => $singleSerie,
-            'updateUser' => $form->createView(),
+            'updateSerie' => $form->createView(),
             'categories' => $categories
         ]);
     }

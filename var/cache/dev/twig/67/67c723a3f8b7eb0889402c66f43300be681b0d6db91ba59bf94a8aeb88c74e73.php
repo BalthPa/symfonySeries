@@ -125,11 +125,11 @@ class __TwigTemplate_2c471413083151b8e5ba89568226c7b5854b976b98b994a8c7d3936e19b
         echo "</h2>
             ";
         // line 24
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["updateUser"]) || array_key_exists("updateUser", $context) ? $context["updateUser"] : (function () { throw new RuntimeError('Variable "updateUser" does not exist.', 24, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["updateSerie"]) || array_key_exists("updateSerie", $context) ? $context["updateSerie"] : (function () { throw new RuntimeError('Variable "updateSerie" does not exist.', 24, $this->source); })()), 'form_start');
         echo "
             ";
         // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["updateUser"]) || array_key_exists("updateUser", $context) ? $context["updateUser"] : (function () { throw new RuntimeError('Variable "updateUser" does not exist.', 25, $this->source); })()), 'rest');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["updateSerie"]) || array_key_exists("updateSerie", $context) ? $context["updateSerie"] : (function () { throw new RuntimeError('Variable "updateSerie" does not exist.', 25, $this->source); })()), 'rest');
         echo "
             <select name=\"categorie\">
                     ";
@@ -156,11 +156,11 @@ class __TwigTemplate_2c471413083151b8e5ba89568226c7b5854b976b98b994a8c7d3936e19b
         echo "\"><button type=\"submit\" class=\"btn btn-primary\">Modifier</button></a>
             ";
         // line 32
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["updateUser"]) || array_key_exists("updateUser", $context) ? $context["updateUser"] : (function () { throw new RuntimeError('Variable "updateUser" does not exist.', 32, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["updateSerie"]) || array_key_exists("updateSerie", $context) ? $context["updateSerie"] : (function () { throw new RuntimeError('Variable "updateSerie" does not exist.', 32, $this->source); })()), 'form_end');
         echo "
             <a href=\"";
         // line 33
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("remove", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["serie"]) || array_key_exists("serie", $context) ? $context["serie"] : (function () { throw new RuntimeError('Variable "serie" does not exist.', 33, $this->source); })()), "id", [], "any", false, false, false, 33)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("removeSerie", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["serie"]) || array_key_exists("serie", $context) ? $context["serie"] : (function () { throw new RuntimeError('Variable "serie" does not exist.', 33, $this->source); })()), "id", [], "any", false, false, false, 33)]), "html", null, true);
         echo "\"><button class=\"btn btn-danger\">Supprimer</button></a>
         </div>
     </div>
@@ -213,16 +213,16 @@ class __TwigTemplate_2c471413083151b8e5ba89568226c7b5854b976b98b994a8c7d3936e19b
 
         <div>
             <h2>Modifier la série {{serie.nom}}</h2>
-            {{form_start(updateUser)}}
-            {{form_rest(updateUser)}}
+            {{form_start(updateSerie)}}
+            {{form_rest(updateSerie)}}
             <select name=\"categorie\">
                     {% for categorie in categories %}
                     <option value='{{categorie.id}}'>{{categorie.nom}}</option>
                     {% endfor %}
             </select>
             <a href=\"{{path('series')}}\"><button type=\"submit\" class=\"btn btn-primary\">Modifier</button></a>
-            {{form_end(updateUser)}}
-            <a href=\"{{path(\"remove\", {id: serie.id})}}\"><button class=\"btn btn-danger\">Supprimer</button></a>
+            {{form_end(updateSerie)}}
+            <a href=\"{{path(\"removeSerie\", {id: serie.id})}}\"><button class=\"btn btn-danger\">Supprimer</button></a>
         </div>
     </div>
 {% endblock %}

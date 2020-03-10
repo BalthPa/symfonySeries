@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerRvND9XN;
+namespace ContainerKDFNqGt;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1680,28 +1680,6 @@ class App_KernelDevDebugContainer extends Container
     }
 
     /**
-     * Gets the private '.service_locator.3CEP2JH' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_3CEP2JHService()
-    {
-        return $this->privates['.service_locator.3CEP2JH'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Controller\\MainController::categorie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
-            'App\\Controller\\MainController::index' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
-            'App\\Controller\\MainController::removeSerie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
-            'App\\Controller\\MainController::series' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
-            'App\\Controller\\MainController::showSerie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
-        ], [
-            'App\\Controller\\MainController::categorie' => '?',
-            'App\\Controller\\MainController::index' => '?',
-            'App\\Controller\\MainController::removeSerie' => '?',
-            'App\\Controller\\MainController::series' => '?',
-            'App\\Controller\\MainController::showSerie' => '?',
-        ]);
-    }
-
-    /**
      * Gets the private '.service_locator.D6XybyG' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1712,6 +1690,30 @@ class App_KernelDevDebugContainer extends Container
             'entityManager' => ['services', 'doctrine.orm.default_entity_manager', 'getDoctrine_Orm_DefaultEntityManagerService', false],
         ], [
             'entityManager' => '?',
+        ]);
+    }
+
+    /**
+     * Gets the private '.service_locator.RCA8dsI' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_RCA8dsIService()
+    {
+        return $this->privates['.service_locator.RCA8dsI'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Controller\\MainController::categorie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+            'App\\Controller\\MainController::index' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+            'App\\Controller\\MainController::removeCategorie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+            'App\\Controller\\MainController::removeSerie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+            'App\\Controller\\MainController::series' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+            'App\\Controller\\MainController::showSerie' => ['privates', '.service_locator.D6XybyG', 'get_ServiceLocator_D6XybyGService', false],
+        ], [
+            'App\\Controller\\MainController::categorie' => '?',
+            'App\\Controller\\MainController::index' => '?',
+            'App\\Controller\\MainController::removeCategorie' => '?',
+            'App\\Controller\\MainController::removeSerie' => '?',
+            'App\\Controller\\MainController::series' => '?',
+            'App\\Controller\\MainController::showSerie' => '?',
         ]);
     }
 
@@ -2491,7 +2493,7 @@ class App_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/NotTaggedControllerValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.3CEP2JH'] ?? $this->get_ServiceLocator_3CEP2JHService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.RCA8dsI'] ?? $this->get_ServiceLocator_RCA8dsIService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -2533,7 +2535,7 @@ class App_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/ServiceValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.3CEP2JH'] ?? $this->get_ServiceLocator_3CEP2JHService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.RCA8dsI'] ?? $this->get_ServiceLocator_RCA8dsIService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -5299,6 +5301,7 @@ class App_KernelDevDebugContainer extends Container
             'kernel.container_class' => 'App_KernelDevDebugContainer',
             'container.dumper.inline_class_loader' => true,
             'container.dumper.inline_factories' => true,
+            'upload_files' => (\dirname(__DIR__, 4).'/public/assets/images'),
             'fragment.renderer.hinclude.global_template' => '',
             'fragment.path' => '/_fragment',
             'kernel.http_method_override' => true,
