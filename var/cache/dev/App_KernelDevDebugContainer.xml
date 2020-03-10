@@ -305,18 +305,11 @@
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>/Applications/MAMP/htdocs/A2/SYMFONY/symfonySeries/var/log/dev.log</argument>
     </service>
-    <service id="App\Controller\CategoriesController" class="App\Controller\CategoriesController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\MainController" class="App\Controller\MainController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\CategoriesController"/>
-      </call>
-    </service>
-    <service id="App\Controller\SeriesController" class="App\Controller\SeriesController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SeriesController"/>
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\MainController"/>
       </call>
     </service>
     <service id="App\Repository\CategoriesRepository" class="App\Repository\CategoriesRepository" autowire="true" autoconfigure="true">
@@ -4537,12 +4530,9 @@
       <tag name="maker.command"/>
       <argument>/Applications/MAMP/htdocs/A2/SYMFONY/symfonySeries</argument>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SeriesController" class="App\Controller\SeriesController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SeriesController" class="App\Controller\SeriesController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\SeriesController" class="App\Controller\SeriesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MainController" class="App\Controller\MainController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoriesRepository" class="App\Repository\CategoriesRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CategoriesRepository" class="App\Repository\CategoriesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SeriesRepository" class="App\Repository\SeriesRepository" autowire="true" abstract="true"/>
@@ -5016,15 +5006,9 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\CategoriesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\CategoriesController"/>
-      <argument>App\Controller\CategoriesController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.pNNo5z3" method="withContext"/>
-    </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\SeriesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\SeriesController"/>
-      <argument>App\Controller\SeriesController</argument>
+    <service id=".service_locator.pNNo5z3.App\Controller\MainController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\MainController"/>
+      <argument>App\Controller\MainController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>

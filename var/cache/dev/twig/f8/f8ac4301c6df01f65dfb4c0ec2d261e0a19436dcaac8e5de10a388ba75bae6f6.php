@@ -56,15 +56,16 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
-        echo "    </head>
+        echo "        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
+    </head>
     <body>
         ";
-        // line 9
-        $this->displayBlock('body', $context, $blocks);
         // line 10
+        $this->displayBlock('body', $context, $blocks);
+        // line 11
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 11
+        // line 12
         echo "    </body>
 </html>
 ";
@@ -113,7 +114,7 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
 
     }
 
-    // line 9
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -131,7 +132,7 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
 
     }
 
-    // line 10
+    // line 11
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -156,7 +157,7 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
 
     public function getDebugInfo()
     {
-        return array (  135 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 11,  65 => 10,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  136 => 11,  118 => 10,  100 => 6,  81 => 5,  69 => 12,  66 => 11,  64 => 10,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -167,12 +168,13 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/A2/SYMFONY/symfonySeries/symfonySeries/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/A2/SYMFONY/symfonySeries/templates/base.html.twig");
     }
 }
