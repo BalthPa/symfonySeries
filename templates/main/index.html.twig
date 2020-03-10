@@ -12,7 +12,7 @@
                 <h4>Il y a {{series|length}} séries dans la BDD</h4>
             {% endif %}
 
-            <a href="series"><button type="button" class="btn btn-primary">Page Séries</button><a>
+            <a href="series"><button type="button" class="btn btn-primary">Page Séries</button></a>
         </div>
 
         <div class='jumbotron'>
@@ -21,7 +21,7 @@
             <h4>Il y a {{categories|length}} categories dans la BDD</h4>
             <ul class="list-group">
                 {% for categorie in categories %}
-                    <a href="categorie/{{categorie.id}}"><li class="list-group-item disabled">{{categorie.nom}} : {{categorie.series|length}} séries</li><a>
+                    <a href="categorie/{{categorie.id}}"><li class="list-group-item disabled">{{categorie.nom}} : {{categorie.series|length}} séries</li></a>
                 {% endfor %}
             </ul>
 

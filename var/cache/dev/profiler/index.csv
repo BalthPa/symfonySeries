@@ -409,3 +409,16 @@ e52fa1,127.0.0.1,GET,http://127.0.0.1:8000/series,1583869172,,200
 59bef2,127.0.0.1,POST,http://127.0.0.1:8000/series,1583869188,,200
 dc8f90,127.0.0.1,POST,http://127.0.0.1:8000/series,1583869243,,200
 ee4d0b,127.0.0.1,POST,http://127.0.0.1:8000/series,1583869245,,200
+a8c5c4,127.0.0.1,GET,http://127.0.0.1:8000/serie/fiche/5,1583869297,,200
+f6bf3e,127.0.0.1,POST,http://127.0.0.1:8000/serie/fiche/5,1583869308,,200
+f951ca,127.0.0.1,GET,http://127.0.0.1:8000/assets/images//private/var/folders/3s/gjgc7yys7z56b3wdvj_bjvww0000gn/T/phpdeJXVh,1583869308,b36643,404
+b36643,127.0.0.1,GET,http://127.0.0.1:8000/assets/images//private/var/folders/3s/gjgc7yys7z56b3wdvj_bjvww0000gn/T/phpdeJXVh,1583869308,,404
+94a125,127.0.0.1,GET,http://127.0.0.1:8000/series,1583869311,,200
+e3966a,127.0.0.1,GET,http://127.0.0.1:8000/serie/fiche/6,1583869316,,200
+f55e96,127.0.0.1,GET,http://127.0.0.1:8000/serie/remove/6,1583869318,,302
+75fd1a,127.0.0.1,GET,http://127.0.0.1:8000/series,1583869318,,200
+6cb4bf,127.0.0.1,GET,http://127.0.0.1:8000/serie/fiche/5,1583869320,,200
+4c4562,127.0.0.1,GET,http://127.0.0.1:8000/assets/images//private/var/folders/3s/gjgc7yys7z56b3wdvj_bjvww0000gn/T/phpdeJXVh,1583869321,1f0b37,404
+1f0b37,127.0.0.1,GET,http://127.0.0.1:8000/assets/images//private/var/folders/3s/gjgc7yys7z56b3wdvj_bjvww0000gn/T/phpdeJXVh,1583869321,,404
+caaa5f,127.0.0.1,GET,http://127.0.0.1:8000/serie/remove/5,1583869322,,302
+d77da2,127.0.0.1,GET,http://127.0.0.1:8000/series,1583869322,,200
