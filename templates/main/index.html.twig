@@ -1,19 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CategoriesController!{% endblock %}
+{% block title %}Homepage - Series et categories{% endblock %}
 
 {% block body %}
     <div class='container'>
-        <div>
+        <div class='jumbotron'>
             <h2>Section Séries</h2>
+            {% if series|length == 0 %}
+                <h4>Il n'y a aucune série enregistré</h4>
+            {% else %}
+                <h4>Il y a {{series|length}} séries dans la BDD</h4>
+            {% endif %}
+
+            <a href="series"><button type="button" class="btn btn-primary">Page Séries</button><a>
         </div>
 
-        <div>
+        <div class='jumbotron'>
             <h2>Section Categories</h2>
+            <h4>Liste Categories </h4>
+            <h4>Il y a {{categories|length}} categories dans la BDD</h4>
             <ul class="list-group">
                 {% for categorie in categories %}
-                <li class="list-group-item disabled">{{categorie.name}}</li>
+                    <a href="categorie/{{categorie.id}}"><li class="list-group-item disabled">{{categorie.nom}} : {{categorie.series|length}} séries</li><a>
                 {% endfor %}
+            </ul>
+
+            <h4>Ajouter une catégorie</h4>
+            {{form(addCategorie)}}
         </div>
     </div>
 {% endblock %}

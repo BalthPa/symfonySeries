@@ -70,12 +70,12 @@ class Series
         return $this;
     }
 
-    public function getAnneeFin(): ?string
+    public function getAnneeFin(): ?\DateTimeInterface
     {
         return $this->anneeFin;
     }
 
-    public function setAnneeFin(?string $anneeFin): self
+    public function setAnneeFin(\DateTimeInterface $anneeFin): self
     {
         $this->anneeFin = $anneeFin;
 

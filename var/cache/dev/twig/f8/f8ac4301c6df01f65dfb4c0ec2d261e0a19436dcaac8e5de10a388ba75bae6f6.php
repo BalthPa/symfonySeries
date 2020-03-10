@@ -59,13 +59,32 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
         echo "        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
     </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg  navbar-dark bg-primary\">
+            
+            <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
+                <ul class=\"navbar-nav\">
+                     <li class=\"nav-item active\">
+                        <a class=\"nav-link\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\">Accueil</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("series");
+        echo "\">Page séries</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         ";
-        // line 10
+        // line 23
         $this->displayBlock('body', $context, $blocks);
-        // line 11
+        // line 24
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
+        // line 25
         echo "    </body>
 </html>
 ";
@@ -114,7 +133,7 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
 
     }
 
-    // line 10
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -132,7 +151,7 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
 
     }
 
-    // line 11
+    // line 24
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -155,9 +174,14 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  136 => 11,  118 => 10,  100 => 6,  81 => 5,  69 => 12,  66 => 11,  64 => 10,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  155 => 24,  137 => 23,  119 => 6,  100 => 5,  88 => 25,  85 => 24,  83 => 23,  75 => 18,  69 => 15,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -171,6 +195,19 @@ class __TwigTemplate_c9e2e957f3fa0efcd33df159693291808871b3d16aed1db9b68f3dfe926
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
     </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg  navbar-dark bg-primary\">
+            
+            <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
+                <ul class=\"navbar-nav\">
+                     <li class=\"nav-item active\">
+                        <a class=\"nav-link\" href=\"{{path('index')}}\">Accueil</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{path('series')}}\">Page séries</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

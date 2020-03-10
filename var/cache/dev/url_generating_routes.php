@@ -15,5 +15,10 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'categories' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
+    'index' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
+    'series' => [[], ['_controller' => 'App\\Controller\\MainController::series'], [], [['text', '/series']], [], []],
+    'showSerie' => [['id'], ['_controller' => 'App\\Controller\\MainController::showSerie'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/serie/fiche']], [], []],
+    'removeSerie' => [['id'], ['_controller' => 'App\\Controller\\MainController::removeSerie'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/serie/remove']], [], []],
+    'categorie' => [['id'], ['_controller' => 'App\\Controller\\MainController::categorie'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/categorie']], [], []],
+    'removeCategorie' => [['id'], ['_controller' => 'App\\Controller\\MainController::removeCategorie'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/categorie/remove']], [], []],
 ];
