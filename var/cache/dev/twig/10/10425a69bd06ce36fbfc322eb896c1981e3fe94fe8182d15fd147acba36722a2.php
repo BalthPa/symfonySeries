@@ -141,10 +141,14 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["serie"], "saisons", [], "any", false, false, false, 28), "html", null, true);
             echo " saisons </p>
                             
+                            <p>Catégorie : ";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["serie"], "categorie", [], "any", false, false, false, 30), "nom", [], "any", false, false, false, 30), "html", null, true);
+            echo "</p>
 
                             <a href=\"serie/fiche/";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["serie"], "id", [], "any", false, false, false, 31), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["serie"], "id", [], "any", false, false, false, 32), "html", null, true);
             echo "\" class=\"btn btn-primary\">Fiche Série</a>
                         </div>            
                     </div>
@@ -153,7 +157,7 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['serie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 36
         echo "            </ul>
         </div>
 
@@ -161,36 +165,36 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
         <div class='jumbotron'>
             <h2>Ajouter une série</h2>
             ";
-        // line 41
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 41, $this->source); })()), 'form_start');
+        // line 42
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 42, $this->source); })()), 'form_start');
         echo "
             ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 42, $this->source); })()), 'rest');
+        // line 43
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 43, $this->source); })()), 'rest');
         echo "
                 <select name=\"categorie\">
                     ";
-        // line 44
+        // line 45
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 44, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 45, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 45
+            // line 46
             echo "                    <option value='";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 46), "html", null, true);
             echo "'>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 46), "html", null, true);
             echo "</option>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 48
         echo "                </select>
             <button type=\"submit\" class=\"btn btn-primary\">Ajouter Série</button>
             ";
-        // line 49
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 49, $this->source); })()), 'form_end');
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["addSeries"]) || array_key_exists("addSeries", $context) ? $context["addSeries"] : (function () { throw new RuntimeError('Variable "addSeries" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
         </div>
     </div>
@@ -215,7 +219,7 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
 
     public function getDebugInfo()
     {
-        return array (  193 => 49,  189 => 47,  178 => 45,  174 => 44,  169 => 42,  165 => 41,  157 => 35,  147 => 31,  141 => 28,  138 => 27,  132 => 25,  128 => 23,  126 => 22,  121 => 20,  117 => 19,  113 => 17,  109 => 16,  105 => 14,  99 => 12,  95 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  197 => 50,  193 => 48,  182 => 46,  178 => 45,  173 => 43,  169 => 42,  161 => 36,  151 => 32,  146 => 30,  141 => 28,  138 => 27,  132 => 25,  128 => 23,  126 => 22,  121 => 20,  117 => 19,  113 => 17,  109 => 16,  105 => 14,  99 => 12,  95 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -249,6 +253,7 @@ class __TwigTemplate_7acda0ea829580fad059bb86681162712694eb70b3559ac47117432d0fb
 
                             <p>{{serie.saisons}} saisons </p>
                             
+                            <p>Catégorie : {{serie.categorie.nom}}</p>
 
                             <a href=\"serie/fiche/{{serie.id}}\" class=\"btn btn-primary\">Fiche Série</a>
                         </div>            
