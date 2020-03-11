@@ -103,7 +103,7 @@ class __TwigTemplate_f32fccb233b936a478678772d470b2d35bb8715f93e8442a0775678a6a5
         }
         // line 14
         echo "
-            <a href=\"series\"><button type=\"button\" class=\"btn btn-primary\">Page Séries</button><a>
+            <a href=\"series\"><button type=\"button\" class=\"btn btn-primary\">Page Séries</button></a>
         </div>
 
         <div class='jumbotron'>
@@ -126,7 +126,7 @@ class __TwigTemplate_f32fccb233b936a478678772d470b2d35bb8715f93e8442a0775678a6a5
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 24), "html", null, true);
             echo " : ";
             echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "series", [], "any", false, false, false, 24)), "html", null, true);
-            echo " séries</li><a>
+            echo " séries</li></a>
                 ";
         }
         $_parent = $context['_parent'];
@@ -182,7 +182,7 @@ class __TwigTemplate_f32fccb233b936a478678772d470b2d35bb8715f93e8442a0775678a6a5
                 <h4>Il y a {{series|length}} séries dans la BDD</h4>
             {% endif %}
 
-            <a href=\"series\"><button type=\"button\" class=\"btn btn-primary\">Page Séries</button><a>
+            <a href=\"series\"><button type=\"button\" class=\"btn btn-primary\">Page Séries</button></a>
         </div>
 
         <div class='jumbotron'>
@@ -191,7 +191,7 @@ class __TwigTemplate_f32fccb233b936a478678772d470b2d35bb8715f93e8442a0775678a6a5
             <h4>Il y a {{categories|length}} categories dans la BDD</h4>
             <ul class=\"list-group\">
                 {% for categorie in categories %}
-                    <a href=\"categorie/{{categorie.id}}\"><li class=\"list-group-item disabled\">{{categorie.nom}} : {{categorie.series|length}} séries</li><a>
+                    <a href=\"categorie/{{categorie.id}}\"><li class=\"list-group-item disabled\">{{categorie.nom}} : {{categorie.series|length}} séries</li></a>
                 {% endfor %}
             </ul>
 

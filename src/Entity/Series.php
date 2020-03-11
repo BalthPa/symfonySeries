@@ -30,7 +30,7 @@ class Series
     private $anneeDebut;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $anneeFin;
 
